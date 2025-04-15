@@ -5314,5 +5314,7 @@ export const GET = async (req: NextRequest) => {
 	redirect("/orders");
 };
 ```
+
 # john-kayrous-nextjs-ecommerce
+
 # john-kayrous-nextjs-ecommerce
