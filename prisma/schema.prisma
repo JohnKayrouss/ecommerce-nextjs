@@ -9,13 +9,12 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
 }
 
 model Product {
-  id          String     @id @default(uuid())
+  id          String     @id @default(uuid()) @map("_id")
   name        String
   company     String
   description String
@@ -29,7 +28,7 @@ model Product {
 }
 
 model Favorite {
-  id        String   @id @default(cuid())
+  id        String   @id @default(uuid()) @map("_id")
   clerkId   String
   product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
   productId String
