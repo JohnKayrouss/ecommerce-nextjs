@@ -24,6 +24,6 @@ export default function FormContainer({
 				description: state.message,
 			});
 		}
-	}, [state?.message, toast]);
+	}, [state?.message]);
 	return <form action={formAction}>{children}</form>;
 }
