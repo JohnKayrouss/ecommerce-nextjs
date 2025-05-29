@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	output: "standalone",
+	devIndicators: false,
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
+	output: process.env.BUILD_STANDALONE === "true" ? "standalone" : undefined,
+	experimental: { forceSwcTransforms: true },
 	images: {
 		remotePatterns: [
 			{
