@@ -15,7 +15,7 @@ export default function Navbar() {
 					<NavSearch />
 				</Suspense>
 				<div className='flex gap-4 items-center'>
-					<CartButton />
+					{/* <CartButton /> */}
 					<DarkMode />
 					<LinksDropdown />
 				</div>

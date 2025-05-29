@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 import "./globals.css";
 
 export const metadata: Metadata = {
-	title: "Next Storefront",
+	title: "John Kayrous",
 	description: "A nifty store built with Next.js",
 };
 
